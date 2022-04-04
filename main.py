@@ -51,7 +51,7 @@ class Table:
                 wi += self.matrix[i][j] * 2 ** (self.no_rows - i - 1)
             self.wis.append(wi)
 
-    def to_table(self, print=["wi", "wj"]):
+    def to_table(self):
         table_data = []
 
         for row in self.matrix:
@@ -88,8 +88,6 @@ def main():
 
     table = Table("data/table.json")
 
-    print(table.to_table())
-    table.sort_rows()
     print(table.to_table())
 
     #  matrix = np.array([[1, 2, 3], [2, 3, 1], [3, 1, 2]])
